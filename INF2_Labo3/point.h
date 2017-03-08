@@ -14,7 +14,20 @@
 #ifndef POINT_H
 #define POINT_H
 
+using namespace std;
 
+class Point{
+public:
+   Point(double X = 0.0, double Y = 0.0);
+   double getX() const;
+   double getY() const;
+   void setX(double);
+   void setY(double);
+   void translate(double,double);
+public:
+   double X;
+   double Y;
+};
 
 #endif /* POINT_H */
 
