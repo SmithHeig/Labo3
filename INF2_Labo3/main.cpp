@@ -1,5 +1,5 @@
 /**
- * @brief Lab3: Geometry (part1)
+ * @brief Lab3: Geometry (part 2)
  *
  * In this lab we do some basic geometry stuff.
  *
@@ -9,8 +9,8 @@
  */
 
 #include "point.h"
+#include "segment.h"
 #include "geometrydrawing.h"
-#include "bmp.h"
 #include <iostream>
 
 using namespace std;
@@ -21,35 +21,32 @@ int main(void) {
     const size_t surface_side = 10;
     GeometryDrawing drawing(surface_side, surface_side);
 
-    cout << "Lab3 - Geometry (part 1)" << endl;
+    cout << "Lab3 - Geometry (part 2)" << endl;
 
-    /* main code */
+    /* main part code */
 
-    // declare some points
-    Point p1(5,5);
-    Point p2;
-    Point p3{4.3,3};
-    Point p4 = {7,2};
-    Point p5(p3);
+    // declare some geometry elements
+    Segment s1(Point{6,5},Point{4,2});
+    Segment s2({2,3},{4,5});
+    Segment s3(1,6,4,7);
 
-    cout << "p2=(" << p2.getX() << "," << p2.getY() << ")" << endl;
+    cout << "s1 length=" << s1.length() << endl;
 
-    cout << "translate p2" << endl;
-    p2.translate(3,2);  // translate using offset x/y
-    cout << "p2=(" << p2.getX() << "," << p2.getY() << ")" << endl;
+    // translate using offset x/y
+    s1.translate(-0.5,-1);
+    cout << "s1.a = " << s1.getA() << endl;
 
-    p3.setX(2);
-    p3.setY(4);
+    // rotate given a rotation point and an offset angle in degrees
+    s2.rotate(s2.getB(), 87);
+    cout << "s2 is " << s2 << endl;
 
-    // draw the points
-    drawing.draw(p1);
-    drawing.draw(p2);
-    drawing.draw(p3);
-    drawing.draw(p4);
-    drawing.draw(p5);
+    // draw elements
+    drawing.draw(s1);
+    drawing.draw(s2);
+    drawing.draw(s3);
 
     /* output */
     drawing.saveToBmp("geometry.bmp");
-	
-	return EXIT_SUCCESS;
+
+    return EXIT_SUCCESS;
 }

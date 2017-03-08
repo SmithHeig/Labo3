@@ -23,7 +23,7 @@ AS=as
 # Macros
 CND_PLATFORM=MinGW-Windows
 CND_DLIB_EXT=dll
-CND_CONF=Release
+CND_CONF=Debug
 CND_DISTDIR=dist
 CND_BUILDDIR=build
 
@@ -38,8 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/bmp.o \
 	${OBJECTDIR}/geometrydrawing.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/point.o \
-	${OBJECTDIR}/segment.o
+	${OBJECTDIR}/point.o
 
 
 # C Compiler Flags
@@ -69,27 +68,22 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/inf2_labo3.exe: ${OBJECTFILES}
 ${OBJECTDIR}/bmp.o: bmp.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/bmp.o bmp.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/bmp.o bmp.cpp
 
 ${OBJECTDIR}/geometrydrawing.o: geometrydrawing.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/geometrydrawing.o geometrydrawing.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/geometrydrawing.o geometrydrawing.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 ${OBJECTDIR}/point.o: point.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/point.o point.cpp
-
-${OBJECTDIR}/segment.o: segment.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/segment.o segment.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/point.o point.cpp
 
 # Subprojects
 .build-subprojects:

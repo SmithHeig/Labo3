@@ -38,8 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/bmp.o \
 	${OBJECTDIR}/geometrydrawing.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/point.o \
-	${OBJECTDIR}/segment.o
+	${OBJECTDIR}/point.o
 
 
 # C Compiler Flags
@@ -85,11 +84,6 @@ ${OBJECTDIR}/point.o: point.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/point.o point.cpp
-
-${OBJECTDIR}/segment.o: segment.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/segment.o segment.cpp
 
 # Subprojects
 .build-subprojects:

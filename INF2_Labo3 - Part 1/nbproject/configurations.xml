@@ -8,7 +8,6 @@
       <itemPath>config.h</itemPath>
       <itemPath>geometrydrawing.h</itemPath>
       <itemPath>point.h</itemPath>
-      <itemPath>segment.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -21,7 +20,6 @@
       <itemPath>geometrydrawing.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
       <itemPath>point.cpp</itemPath>
-      <itemPath>segment.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -64,10 +62,6 @@
       </item>
       <item path="point.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="segment.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="segment.h" ex="false" tool="3" flavor2="0">
-      </item>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
@@ -105,10 +99,6 @@
       <item path="point.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="point.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="segment.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="segment.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
