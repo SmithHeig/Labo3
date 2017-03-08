@@ -39,7 +39,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/geometrydrawing.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/point.o \
-	${OBJECTDIR}/segment.o
+	${OBJECTDIR}/segment.o \
+	${OBJECTDIR}/triangle.o
 
 
 # C Compiler Flags
@@ -90,6 +91,11 @@ ${OBJECTDIR}/segment.o: segment.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/segment.o segment.cpp
+
+${OBJECTDIR}/triangle.o: triangle.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/triangle.o triangle.cpp
 
 # Subprojects
 .build-subprojects:
