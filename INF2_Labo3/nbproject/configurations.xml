@@ -4,6 +4,10 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>bmp.h</itemPath>
+      <itemPath>config.h</itemPath>
+      <itemPath>geometrydrawing.h</itemPath>
+      <itemPath>point.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,7 +16,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>bmp.cpp</itemPath>
+      <itemPath>geometrydrawing.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>point.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -39,7 +46,21 @@
           <standard>8</standard>
         </ccTool>
       </compileType>
+      <item path="bmp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="bmp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="geometrydrawing.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="geometrydrawing.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="point.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="point.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -63,7 +84,21 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="bmp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="bmp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="geometrydrawing.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="geometrydrawing.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="point.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="point.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
