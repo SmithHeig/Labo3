@@ -18,6 +18,8 @@
 #include "segment.h"
 #include "point.h"
 
+using namespace std;
+
 class Triangle {
 public:
    Triangle(const Segment&, const Point&);
@@ -25,9 +27,12 @@ public:
    void translate(const double, const double);
    double perimeter();
    void rotate(const Point&, const double);
-   double intersect(const Triangle&, const vector<Point>&);
+   bool intersect(const Triangle&, vector<Point>&);
 private:
-   
+   Point A;
+   Point B;
+   Point C;
+   double t_perimeter;
 };
 
 #endif /* TRIANGLE_H */

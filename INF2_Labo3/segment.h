@@ -28,9 +28,11 @@ public:
    Point getB() const;
    void translate(const double, const double);
    void rotate(const Point&, const double);
+   Point intersect(const Segment&);
    friend ostream& operator << (ostream& stream, const Segment&);
 private:
    void setLenght();
+   double getPente(); //mettre en anglais
    Point A;
    Point B;
    double length_segment;

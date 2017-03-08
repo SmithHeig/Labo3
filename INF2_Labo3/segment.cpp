@@ -49,7 +49,15 @@ void Segment::setLenght(){
    length_segment = sqrt((A.X - B.X) * (A.X - B.X) + (A.Y - B.Y) * (A.Y - B.Y));
 }
 
+Point Segment::intersect(const Segment& S) {
+   //y = ax + b formule d'une droite
+}
+
 ostream& operator << (ostream& stream, const Segment& S){
    stream << "a:" << S.A << " b:" << S.B;
    return stream;
+}
+
+double getPente(){ //TODO
+   return ;
 }
