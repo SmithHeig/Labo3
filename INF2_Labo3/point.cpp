@@ -34,7 +34,7 @@ void Point::translate(const double translation_X, const double translation_Y){
 }
 
 void Point::rotate(const Point& A, const double angle){
-   //const double M_PI = 3.1415;
+   const double M_PI = 3.1415;
    double angle_in_radian = angle * (M_PI/ 180);
    double diff_X = this->X - A.X;
    double diff_Y = this->Y - A.Y;

@@ -135,9 +135,9 @@ int main(void) {
     }
 
     // draw triangles
-    drawing.draw(t1);
-    drawing.draw(t2);
-    drawing.draw(t3);
+    //drawing.draw(t1);
+    //drawing.draw(t2);
+    //drawing.draw(t3);
     //
     // part 3 end 
     //

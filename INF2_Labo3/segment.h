@@ -16,6 +16,7 @@
 
 #include "point.h"
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -28,11 +29,12 @@ public:
    Point getB() const;
    void translate(const double, const double);
    void rotate(const Point&, const double);
-   Point intersect(const Segment&);
+   bool intersect(const Segment& S, vector<Point>& intersectionPoints) const;
    friend ostream& operator << (ostream& stream, const Segment&);
 private:
    void setLenght();
-   double getPente(); //mettre en anglais
+   double getPente() const; //mettre en anglais
+   double getOrdonneOriginie() const; // mettre en anglais
    Point A;
    Point B;
    double length_segment;

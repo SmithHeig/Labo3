@@ -27,7 +27,10 @@ public:
    void translate(const double, const double);
    double perimeter();
    void rotate(const Point&, const double);
-   bool intersect(const Triangle&, vector<Point>&);
+   bool intersect(const Triangle&, vector<Point>&) const;
+   Segment getAB() const {return Segment(A,B);}
+   Segment getCA() const {return Segment(C,A);}
+   Segment getBC() const {return Segment(B,C);}
 private:
    Point A;
    Point B;
