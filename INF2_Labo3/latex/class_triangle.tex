@@ -1,0 +1,164 @@
+\hypertarget{class_triangle}{}\section{Triangle Class Reference}
+\label{class_triangle}\index{Triangle@{Triangle}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_triangle_adb8210bc99b01e6c680a4bb8f72c3707}{Triangle} (const \hyperlink{class_segment}{Segment} \&S, const \hyperlink{class_point}{Point} \&A)
+\begin{DoxyCompactList}\small\item\em Constructor of the \hyperlink{class_triangle}{Triangle} class (with a segment and a point) \end{DoxyCompactList}\item 
+\hyperlink{class_triangle_a272302dade63e2f5944c1b484b98eea6}{Triangle} (const \hyperlink{class_point}{Point} \&A, const \hyperlink{class_point}{Point} \&B, const \hyperlink{class_point}{Point} \&C)
+\begin{DoxyCompactList}\small\item\em Constructor of the \hyperlink{class_triangle}{Triangle} class (with three points) \end{DoxyCompactList}\item 
+void \hyperlink{class_triangle_ab7b89a40466185cdddbccf9a86ba4fa8}{translate} (const double X, const double Y)
+\begin{DoxyCompactList}\small\item\em translate the triangle on the plan \end{DoxyCompactList}\item 
+double \hyperlink{class_triangle_ae329043e5e9e59c486358dad75b1f1c2}{perimeter} ()
+\item 
+void \hyperlink{class_triangle_abc634b2ea1963e233b13dcd66009ec8d}{rotate} (const \hyperlink{class_point}{Point} \&p1, const double angle)
+\begin{DoxyCompactList}\small\item\em rotate the triangle relative to a point \end{DoxyCompactList}\item 
+bool \hyperlink{class_triangle_a8f1c191200d6f71717e63fe08e272c57}{intersect} (const \hyperlink{class_triangle}{Triangle} \&t2, vector$<$ \hyperlink{class_point}{Point} $>$ \&intersection\+Points) const
+\begin{DoxyCompactList}\small\item\em calcul all the intersections of two triangle. \end{DoxyCompactList}\item 
+\hyperlink{class_segment}{Segment} \hyperlink{class_triangle_a360f842608dd44bc1c62cfc7f2a15805}{get\+AB} () const
+\item 
+\hyperlink{class_segment}{Segment} \hyperlink{class_triangle_a17394838467805e991e28444b7d805b5}{get\+CA} () const
+\item 
+\hyperlink{class_segment}{Segment} \hyperlink{class_triangle_a8e4a0791b3208015057a8d5effc653ae}{get\+BC} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_triangle_adb8210bc99b01e6c680a4bb8f72c3707}{}\label{class_triangle_adb8210bc99b01e6c680a4bb8f72c3707} 
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{Triangle()}{Triangle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Triangle\+::\+Triangle (\begin{DoxyParamCaption}\item[{const \hyperlink{class_segment}{Segment} \&}]{S,  }\item[{const \hyperlink{class_point}{Point} \&}]{A }\end{DoxyParamCaption})}
+
+
+
+Constructor of the \hyperlink{class_triangle}{Triangle} class (with a segment and a point) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S} & segment of the triangle(on side of the triangle) \\
+\hline
+{\em A} & point who connect both side of the segment to create the triangle \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_triangle_a272302dade63e2f5944c1b484b98eea6}{}\label{class_triangle_a272302dade63e2f5944c1b484b98eea6} 
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{Triangle()}{Triangle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Triangle\+::\+Triangle (\begin{DoxyParamCaption}\item[{const \hyperlink{class_point}{Point} \&}]{A,  }\item[{const \hyperlink{class_point}{Point} \&}]{B,  }\item[{const \hyperlink{class_point}{Point} \&}]{C }\end{DoxyParamCaption})}
+
+
+
+Constructor of the \hyperlink{class_triangle}{Triangle} class (with three points) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & one of the 3 point who form the triangle \\
+\hline
+{\em B} & one of the 3 point who form the triangle \\
+\hline
+{\em C} & one of the 3 point who form the triangle \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_triangle_a360f842608dd44bc1c62cfc7f2a15805}{}\label{class_triangle_a360f842608dd44bc1c62cfc7f2a15805} 
+\index{Triangle@{Triangle}!get\+AB@{get\+AB}}
+\index{get\+AB@{get\+AB}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{get\+A\+B()}{getAB()}}
+{\footnotesize\ttfamily \hyperlink{class_segment}{Segment} Triangle\+::get\+AB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+return the segment between the point A and B of the triangle 
+\end{DoxyReturn}
+\hypertarget{class_triangle_a8e4a0791b3208015057a8d5effc653ae}{}\label{class_triangle_a8e4a0791b3208015057a8d5effc653ae} 
+\index{Triangle@{Triangle}!get\+BC@{get\+BC}}
+\index{get\+BC@{get\+BC}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{get\+B\+C()}{getBC()}}
+{\footnotesize\ttfamily \hyperlink{class_segment}{Segment} Triangle\+::get\+BC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+return the segment between the point B and C of the triangle 
+\end{DoxyReturn}
+\hypertarget{class_triangle_a17394838467805e991e28444b7d805b5}{}\label{class_triangle_a17394838467805e991e28444b7d805b5} 
+\index{Triangle@{Triangle}!get\+CA@{get\+CA}}
+\index{get\+CA@{get\+CA}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{get\+C\+A()}{getCA()}}
+{\footnotesize\ttfamily \hyperlink{class_segment}{Segment} Triangle\+::get\+CA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+return the segment between the point C and A of the triangle 
+\end{DoxyReturn}
+\hypertarget{class_triangle_a8f1c191200d6f71717e63fe08e272c57}{}\label{class_triangle_a8f1c191200d6f71717e63fe08e272c57} 
+\index{Triangle@{Triangle}!intersect@{intersect}}
+\index{intersect@{intersect}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily bool Triangle\+::intersect (\begin{DoxyParamCaption}\item[{const \hyperlink{class_triangle}{Triangle} \&}]{t2,  }\item[{vector$<$ \hyperlink{class_point}{Point} $>$ \&}]{intersection\+Points }\end{DoxyParamCaption}) const}
+
+
+
+calcul all the intersections of two triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t2} & is the triangle to calculate if it intersect with the other triangle \\
+\hline
+{\em intersection\+Points} & container of all the intersection\+Points \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a booleen if the two triangle intersect each other or not 
+\end{DoxyReturn}
+\hypertarget{class_triangle_ae329043e5e9e59c486358dad75b1f1c2}{}\label{class_triangle_ae329043e5e9e59c486358dad75b1f1c2} 
+\index{Triangle@{Triangle}!perimeter@{perimeter}}
+\index{perimeter@{perimeter}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{perimeter()}{perimeter()}}
+{\footnotesize\ttfamily double Triangle\+::perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+return the perimeter of the triangle 
+\end{DoxyReturn}
+\hypertarget{class_triangle_abc634b2ea1963e233b13dcd66009ec8d}{}\label{class_triangle_abc634b2ea1963e233b13dcd66009ec8d} 
+\index{Triangle@{Triangle}!rotate@{rotate}}
+\index{rotate@{rotate}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Triangle\+::rotate (\begin{DoxyParamCaption}\item[{const \hyperlink{class_point}{Point} \&}]{p1,  }\item[{const double}]{angle }\end{DoxyParamCaption})}
+
+
+
+rotate the triangle relative to a point 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & point where is calculated the angle \\
+\hline
+{\em angle} & of the rotation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+the rotation is from the right to the left 
+\end{DoxyRemark}
+\hypertarget{class_triangle_ab7b89a40466185cdddbccf9a86ba4fa8}{}\label{class_triangle_ab7b89a40466185cdddbccf9a86ba4fa8} 
+\index{Triangle@{Triangle}!translate@{translate}}
+\index{translate@{translate}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Triangle\+::translate (\begin{DoxyParamCaption}\item[{const double}]{X,  }\item[{const double}]{Y }\end{DoxyParamCaption})}
+
+
+
+translate the triangle on the plan 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & the horizontal distance to translate the trinagle \\
+\hline
+{\em Y} & the vertical distance to translate the triangle \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+triangle.\+h\item 
+\hyperlink{triangle_8cpp}{triangle.\+cpp}\end{DoxyCompactItemize}

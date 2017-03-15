@@ -1,7 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @brief Contain all the functions of the class Triangle
+ *
+ * @author James Smith
+ * @headerfile triangle.h "triangle.h"
+ * @date    14.03.2017
+ * @file    triangle.cpp
+ * @remark  Compilateur : MinGW-g++ 5.3.0
  */
 
 #include "triangle.h"
@@ -12,10 +16,10 @@ Triangle::Triangle(const Segment& s, const Point& p) {
     C = p;
 }
 
-Triangle::Triangle(const Point& p1, const Point& p2, const Point& p3) {
-    A = p1;
-    B = p2;
-    C = p3;
+Triangle::Triangle(const Point& A, const Point& B, const Point& C) {
+    this->A = A;
+    this->B = B;
+    this->C = C;
 }
 
 void Triangle::rotate(const Point& p, const double angle) {

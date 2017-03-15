@@ -1,0 +1,180 @@
+\hypertarget{class_segment}{}\section{Segment Class Reference}
+\label{class_segment}\index{Segment@{Segment}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_segment_a9ef80a38420c7f5cd5b9e38a5b3b9aa8}{Segment} (const \hyperlink{class_point}{Point} \&A, const \hyperlink{class_point}{Point} \&B)
+\begin{DoxyCompactList}\small\item\em Constructor of the \hyperlink{class_segment}{Segment} class. \end{DoxyCompactList}\item 
+\hyperlink{class_segment_a8b4be8979301698353b32b0fcddf12b2}{Segment} (const double X1, const double Y1, const double X2, const double Y2)
+\begin{DoxyCompactList}\small\item\em Constructor of the \hyperlink{class_segment}{Segment} class. \end{DoxyCompactList}\item 
+double \hyperlink{class_segment_a2821b168d6fdaba5cf63a89d8c3172f4}{length} () const
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_segment_af7966e09f5f1b20e3497a87fc3bf8fd4}{getA} () const
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_segment_aa3d51597ac979d8df485ec5d61493b03}{getB} () const
+\item 
+void \hyperlink{class_segment_a265c7d9b2b36e633c8329a576ecf83cb}{translate} (const double X, const double Y)
+\begin{DoxyCompactList}\small\item\em translate the segment on the plan \end{DoxyCompactList}\item 
+void \hyperlink{class_segment_ab6249f23914eaa6ab4864c46202039bd}{rotate} (const \hyperlink{class_point}{Point} \&A, const double angle)
+\begin{DoxyCompactList}\small\item\em rotate the segment relative to a point \end{DoxyCompactList}\item 
+bool \hyperlink{class_segment_a379ebf65c2be2ce40d603ed33dae8843}{intersect} (const \hyperlink{class_segment}{Segment} \&S, vector$<$ \hyperlink{class_point}{Point} $>$ \&intersection\+Points) const
+\begin{DoxyCompactList}\small\item\em calcul the intersection of two segments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_segment_a494b19a0304a0778bcfb0303f33aec02}{operator$<$$<$} (ostream \&stream, const \hyperlink{class_segment}{Segment} \&)
+\begin{DoxyCompactList}\small\item\em overload of the redirection operator of the ostream class to show a custom display of the segment. a\+:(\+X1,\+Y1) b\+:(\+X2,\+Y2) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_segment_a9ef80a38420c7f5cd5b9e38a5b3b9aa8}{}\label{class_segment_a9ef80a38420c7f5cd5b9e38a5b3b9aa8} 
+\index{Segment@{Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{Segment()}{Segment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{const \hyperlink{class_point}{Point} \&}]{A,  }\item[{const \hyperlink{class_point}{Point} \&}]{B }\end{DoxyParamCaption})}
+
+
+
+Constructor of the \hyperlink{class_segment}{Segment} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & point of a end of the segment \\
+\hline
+{\em B} & point of the other end of the segment \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_segment_a8b4be8979301698353b32b0fcddf12b2}{}\label{class_segment_a8b4be8979301698353b32b0fcddf12b2} 
+\index{Segment@{Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{Segment()}{Segment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{const double}]{X1,  }\item[{const double}]{Y1,  }\item[{const double}]{X2,  }\item[{const double}]{Y2 }\end{DoxyParamCaption})}
+
+
+
+Constructor of the \hyperlink{class_segment}{Segment} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X1} & is the horizontal position of the point A \\
+\hline
+{\em Y1} & is the vertical position of the point A \\
+\hline
+{\em X2} & is the horizontal position of the point B \\
+\hline
+{\em Y2} & is the vertical position of the point B \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_segment_af7966e09f5f1b20e3497a87fc3bf8fd4}{}\label{class_segment_af7966e09f5f1b20e3497a87fc3bf8fd4} 
+\index{Segment@{Segment}!getA@{getA}}
+\index{getA@{getA}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{get\+A()}{getA()}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Segment\+::getA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{class_point}{Point} A of the segment 
+\end{DoxyReturn}
+\hypertarget{class_segment_aa3d51597ac979d8df485ec5d61493b03}{}\label{class_segment_aa3d51597ac979d8df485ec5d61493b03} 
+\index{Segment@{Segment}!getB@{getB}}
+\index{getB@{getB}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{get\+B()}{getB()}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Segment\+::getB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{class_point}{Point} B of the segment 
+\end{DoxyReturn}
+\hypertarget{class_segment_a379ebf65c2be2ce40d603ed33dae8843}{}\label{class_segment_a379ebf65c2be2ce40d603ed33dae8843} 
+\index{Segment@{Segment}!intersect@{intersect}}
+\index{intersect@{intersect}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily bool Segment\+::intersect (\begin{DoxyParamCaption}\item[{const \hyperlink{class_segment}{Segment} \&}]{S,  }\item[{vector$<$ \hyperlink{class_point}{Point} $>$ \&}]{intersection\+Points }\end{DoxyParamCaption}) const}
+
+
+
+calcul the intersection of two segments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S} & \hyperlink{class_segment}{Segment} to calculate if it intersect with the other segment \\
+\hline
+{\em intersection\+Points} & container of all the intersection\+Points \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a booleen if the two segment intersect each other or not 
+\end{DoxyReturn}
+\hypertarget{class_segment_a2821b168d6fdaba5cf63a89d8c3172f4}{}\label{class_segment_a2821b168d6fdaba5cf63a89d8c3172f4} 
+\index{Segment@{Segment}!length@{length}}
+\index{length@{length}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily double Segment\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the length of the segment 
+\end{DoxyReturn}
+\hypertarget{class_segment_ab6249f23914eaa6ab4864c46202039bd}{}\label{class_segment_ab6249f23914eaa6ab4864c46202039bd} 
+\index{Segment@{Segment}!rotate@{rotate}}
+\index{rotate@{rotate}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Segment\+::rotate (\begin{DoxyParamCaption}\item[{const \hyperlink{class_point}{Point} \&}]{A,  }\item[{const double}]{angle }\end{DoxyParamCaption})}
+
+
+
+rotate the segment relative to a point 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & point where is calculated the angle \\
+\hline
+{\em angle} & the angle of the rotation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+the rotation is from the right to the left 
+\end{DoxyRemark}
+\hypertarget{class_segment_a265c7d9b2b36e633c8329a576ecf83cb}{}\label{class_segment_a265c7d9b2b36e633c8329a576ecf83cb} 
+\index{Segment@{Segment}!translate@{translate}}
+\index{translate@{translate}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Segment\+::translate (\begin{DoxyParamCaption}\item[{const double}]{X,  }\item[{const double}]{Y }\end{DoxyParamCaption})}
+
+
+
+translate the segment on the plan 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & is the horizontal distance to translate the segment \\
+\hline
+{\em Y} & is the vertical distance to translate the segment \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_segment_a494b19a0304a0778bcfb0303f33aec02}{}\label{class_segment_a494b19a0304a0778bcfb0303f33aec02} 
+\index{Segment@{Segment}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{stream,  }\item[{const \hyperlink{class_segment}{Segment} \&}]{S }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+overload of the redirection operator of the ostream class to show a custom display of the segment. a\+:(\+X1,\+Y1) b\+:(\+X2,\+Y2) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & is the curent stream. \\
+\hline
+{\em \hyperlink{class_segment}{Segment}} & si the segment to show. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+segment.\+h\item 
+\hyperlink{segment_8cpp}{segment.\+cpp}\end{DoxyCompactItemize}

@@ -1,7 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @brief Contain all the functions of the class Segment
+ *
+ * @author James Smith
+ * @headerfile segment.h "segment.h"
+ * @date    14.03.2017
+ * @file    segment.cpp
+ * @remark  The intersect function as been inspired by the web site 
+ *          https://openclassrooms.com/forum/sujet/calcul-du-point-d-intersection-de-deux-segments-21661
+ * 
+ *          Compilateur : MinGW-g++ 5.3.0
  */
 
 #include "segment.h"
@@ -34,10 +41,8 @@ Point Segment::getB() const {
 }
 
 void Segment::translate(const double X, const double Y) {
-    A.X += X;
-    B.X += X;
-    A.Y += Y;
-    B.Y += Y;
+    A.translate(X,Y);
+    B.translate(X,Y);
     setLenght();
 }
 
@@ -47,33 +52,40 @@ void Segment::rotate(const Point& C, const double angle) {
 }
 
 void Segment::setLenght() {
-    length_segment = sqrt((A.X - B.X) * (A.X - B.X) + (A.Y - B.Y) * (A.Y - B.Y));
+    length_segment = sqrt((A.getX() - B.getX()) * (A.getX() - B.getX()) + (A.getY() - B.getY()) * (A.getY() - B.getY()));
 }
 
 bool Segment::intersect(const Segment& S, vector<Point>& intersectionPoints) const {
     bool controle = false;
     double yCommun;
     double xCommun;
-    if (A.X == B.X) {
-        yCommun = S.getPente() * A.X + S.getOrdonneOriginie();
-        xCommun = A.X;
-        controle = true;
-    } else if (S.A.X == S.B.X) {
-        yCommun = getPente() * S.A.X + getOrdonneOriginie();
-        xCommun = S.A.X;
-        controle = true;
-    } else if (getPente() - S.getPente() != 0) {
-        xCommun = abs((getOrdonneOriginie() - S.getOrdonneOriginie()) / (getPente() - S.getPente()));
-        yCommun = getPente() * xCommun + getOrdonneOriginie();
-        controle = true;
-    }
-    if (controle) {
-        Point pointIntersection(xCommun, yCommun);
-        Segment s1(A, pointIntersection);
-        Segment s2(B, pointIntersection);
-        if (length() > s1.length() && length() > s2.length()) {
-            intersectionPoints.push_back(pointIntersection);
-            return true;
+    // Test if the two segment are not parallels
+    if (getPente() != S.getPente()) {
+        // Test if the "main" segment is vertical
+        if (A.getX() == B.getX()) {
+            yCommun = S.getPente() * A.getX() + S.getOrdonneOriginie();
+            xCommun = A.getX();
+            controle = true;
+            
+        // Test if the other segment is vertical
+        } else if (S.A.getX() == S.B.getX()) {
+            yCommun = getPente() * S.A.getX() + getOrdonneOriginie();
+            xCommun = S.A.getX();
+            controle = true;
+        } else {
+            xCommun = abs((getOrdonneOriginie() - S.getOrdonneOriginie()) / (getPente() - S.getPente()));
+            yCommun = getPente() * xCommun + getOrdonneOriginie();
+            controle = true;
+        }
+        // Controle if the intersection point is in the interval
+        if (controle) {
+            Point pointIntersection(xCommun, yCommun);
+            Segment s1(A, pointIntersection);
+            Segment s2(B, pointIntersection);
+            if (length() > s1.length() && length() > s2.length()) {
+                intersectionPoints.push_back(pointIntersection);
+                return true;
+            }
         }
     }
     return false;
@@ -85,14 +97,14 @@ ostream& operator<<(ostream& stream, const Segment& S) {
 }
 
 double Segment::getPente() const {
-    if (B.X > A.X) {
-        return (B.Y - A.Y) / (B.X - A.X);
+    if (B.getX() > A.getX()) {
+        return (B.getY() - A.getY()) / (B.getX() - A.getX());
     } else {
-        return (A.Y - B.Y) / (A.X - B.X);
+        return (A.getY() - B.getY()) / (A.getX() - B.getX());
     }
     return 0;
 }
 
 double Segment::getOrdonneOriginie() const {
-    return A.Y - (getPente() * A.X);
+    return A.getY() - (getPente() * A.getX());
 }

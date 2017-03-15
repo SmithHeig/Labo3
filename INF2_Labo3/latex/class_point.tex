@@ -1,0 +1,178 @@
+\hypertarget{class_point}{}\section{Point Class Reference}
+\label{class_point}\index{Point@{Point}}
+
+
+This class represent a point in a plan and contain different operation on it.  
+
+
+
+
+{\ttfamily \#include $<$point.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_point_aafb618df00f36c0bcbec778511f6a3f7}{Point} (double X=0.\+0, double Y=0.\+0)
+\begin{DoxyCompactList}\small\item\em Constructor of the class \hyperlink{class_point}{Point}. \end{DoxyCompactList}\item 
+double \hyperlink{class_point_a655794dd595a4821987664bf1d9010e8}{getX} () const
+\begin{DoxyCompactList}\small\item\em Get the value of the horizontal position (x) \end{DoxyCompactList}\item 
+double \hyperlink{class_point_aa323a12bec85e28ce6575dccec4f8b28}{getY} () const
+\begin{DoxyCompactList}\small\item\em Get the value of the vertical position (y) \end{DoxyCompactList}\item 
+void \hyperlink{class_point_a59ad664629f66d7faa5a97c222b11e53}{setX} (const double)
+\begin{DoxyCompactList}\small\item\em change or set the value of X (position horizontal of the point) \end{DoxyCompactList}\item 
+void \hyperlink{class_point_a62d94bacca48640df1beb272527e0c75}{setY} (const double)
+\begin{DoxyCompactList}\small\item\em change or set the value of Y (position vertical of the point) \end{DoxyCompactList}\item 
+void \hyperlink{class_point_a57287a060ea145f69d3d4eb484e64d64}{translate} (const double, const double)
+\begin{DoxyCompactList}\small\item\em Translate the point on the plan. \end{DoxyCompactList}\item 
+void \hyperlink{class_point_a698b03ed343ee2971a279ed196e80b6b}{rotate} (const \hyperlink{class_point}{Point} \&, const double)
+\begin{DoxyCompactList}\small\item\em rotate the point relative to another point \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_point_a2cb585eaed961c31bb595dfa36f98bf8}{operator$<$$<$} (ostream \&stream, const \hyperlink{class_point}{Point} \&)
+\begin{DoxyCompactList}\small\item\em overload of the redirection operator of the ostream class to show a custom display of the point. (X,Y) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represent a point in a plan and contain different operation on it. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_point_aafb618df00f36c0bcbec778511f6a3f7}{}\label{class_point_aafb618df00f36c0bcbec778511f6a3f7} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection{\texorpdfstring{Point()}{Point()}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}\item[{double}]{X = {\ttfamily 0.0},  }\item[{double}]{Y = {\ttfamily 0.0} }\end{DoxyParamCaption})}
+
+
+
+Constructor of the class \hyperlink{class_point}{Point}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & is the horizontal position of the point \\
+\hline
+{\em Y} & is the vertical position of the point \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_point_a655794dd595a4821987664bf1d9010e8}{}\label{class_point_a655794dd595a4821987664bf1d9010e8} 
+\index{Point@{Point}!getX@{getX}}
+\index{getX@{getX}!Point@{Point}}
+\subsubsection{\texorpdfstring{get\+X()}{getX()}}
+{\footnotesize\ttfamily double Point\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the value of the horizontal position (x) 
+
+\begin{DoxyReturn}{Returns}
+X the value of the horizontal position 
+\end{DoxyReturn}
+\hypertarget{class_point_aa323a12bec85e28ce6575dccec4f8b28}{}\label{class_point_aa323a12bec85e28ce6575dccec4f8b28} 
+\index{Point@{Point}!getY@{getY}}
+\index{getY@{getY}!Point@{Point}}
+\subsubsection{\texorpdfstring{get\+Y()}{getY()}}
+{\footnotesize\ttfamily double Point\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the value of the vertical position (y) 
+
+\begin{DoxyReturn}{Returns}
+Y the value of the vertical position 
+\end{DoxyReturn}
+\hypertarget{class_point_a698b03ed343ee2971a279ed196e80b6b}{}\label{class_point_a698b03ed343ee2971a279ed196e80b6b} 
+\index{Point@{Point}!rotate@{rotate}}
+\index{rotate@{rotate}!Point@{Point}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Point\+::rotate (\begin{DoxyParamCaption}\item[{const \hyperlink{class_point}{Point} \&}]{A,  }\item[{const double}]{angle }\end{DoxyParamCaption})}
+
+
+
+rotate the point relative to another point 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & point where is calculated the angle \\
+\hline
+{\em angle} & the angle of the rotation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+the rotation is from the right to the left 
+\end{DoxyRemark}
+\hypertarget{class_point_a59ad664629f66d7faa5a97c222b11e53}{}\label{class_point_a59ad664629f66d7faa5a97c222b11e53} 
+\index{Point@{Point}!setX@{setX}}
+\index{setX@{setX}!Point@{Point}}
+\subsubsection{\texorpdfstring{set\+X()}{setX()}}
+{\footnotesize\ttfamily void Point\+::setX (\begin{DoxyParamCaption}\item[{const double}]{X }\end{DoxyParamCaption})}
+
+
+
+change or set the value of X (position horizontal of the point) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & the new value of X \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_point_a62d94bacca48640df1beb272527e0c75}{}\label{class_point_a62d94bacca48640df1beb272527e0c75} 
+\index{Point@{Point}!setY@{setY}}
+\index{setY@{setY}!Point@{Point}}
+\subsubsection{\texorpdfstring{set\+Y()}{setY()}}
+{\footnotesize\ttfamily void Point\+::setY (\begin{DoxyParamCaption}\item[{const double}]{Y }\end{DoxyParamCaption})}
+
+
+
+change or set the value of Y (position vertical of the point) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Y} & the new value of Y \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_point_a57287a060ea145f69d3d4eb484e64d64}{}\label{class_point_a57287a060ea145f69d3d4eb484e64d64} 
+\index{Point@{Point}!translate@{translate}}
+\index{translate@{translate}!Point@{Point}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Point\+::translate (\begin{DoxyParamCaption}\item[{const double}]{translation\+\_\+X,  }\item[{const double}]{translation\+\_\+Y }\end{DoxyParamCaption})}
+
+
+
+Translate the point on the plan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & the horizontal distance of the translation \\
+\hline
+{\em Y} & the vertical distance of the translation \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_point_a2cb585eaed961c31bb595dfa36f98bf8}{}\label{class_point_a2cb585eaed961c31bb595dfa36f98bf8} 
+\index{Point@{Point}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Point@{Point}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{stream,  }\item[{const \hyperlink{class_point}{Point} \&}]{A }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+overload of the redirection operator of the ostream class to show a custom display of the point. (X,Y) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & is the curent stream \\
+\hline
+{\em \hyperlink{class_point}{Point}} & si the point to show. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{point_8h}{point.\+h}\item 
+\hyperlink{point_8cpp}{point.\+cpp}\end{DoxyCompactItemize}
